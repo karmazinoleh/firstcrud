@@ -6,7 +6,7 @@ namespace firstcrud.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class ProductController(ProductDbContext context) : ControllerBase
+public class ProductController(ProductDbContext context, ILogger<ProductController> logger) : ControllerBase
 {
     private readonly ProductDbContext _context = context;
 
@@ -20,7 +20,13 @@ public class ProductController(ProductDbContext context) : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Product>>> GetProducts()
     {
-        return Ok(await _context.Products.ToListAsync());
+        List<Product> products = await _context.Products
+            .Include(g => g.ProductDetails)
+            .Include(g => g.Publisher)
+            .Include(g => g.Customers)
+            .ToListAsync();
+        logger.LogInformation("Retrieved {productCount} products}",  products.Count);
+        return Ok(products);
     }
     
     [HttpGet("{id}")]

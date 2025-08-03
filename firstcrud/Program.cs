@@ -1,8 +1,11 @@
 using firstcrud.Controllers.Data;
 using Microsoft.EntityFrameworkCore;
+using OpenTelemetry.Logs;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Logging.ClearProviders();
+builder.Logging.AddOpenTelemetry(x => x.AddOtlpExporter());
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
