@@ -1,4 +1,5 @@
 using firstcrud.Controllers.Data;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,16 +17,15 @@ public class ProductController(ProductDbContext context, ILogger<ProductControll
         _context = context;
     } 
     */ 
-
     [HttpGet]
     public async Task<ActionResult<List<Product>>> GetProducts()
     {
-        List<Product> products = await _context.Products
+        var products = await _context.Products
             .Include(g => g.ProductDetails)
             .Include(g => g.Publisher)
             .Include(g => g.Customers)
             .ToListAsync();
-        logger.LogInformation("Retrieved {productCount} products}",  products.Count);
+        logger.LogInformation("Retrieved {productCount} products",  products.Count);
         return Ok(products);
     }
     
@@ -37,6 +37,7 @@ public class ProductController(ProductDbContext context, ILogger<ProductControll
         {
             return NotFound();
         }
+        logger.LogInformation("Retrieved {productId} product",  id);
         return Ok(product);
     }
 

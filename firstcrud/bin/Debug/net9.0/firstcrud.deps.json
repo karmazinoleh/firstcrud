@@ -14,10 +14,56 @@
           "Microsoft.EntityFrameworkCore.Tools": "9.0.7",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "OpenTelemetry.Exporter.Console": "1.12.0",
-          "Scalar.AspNetCore": "2.6.6"
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.12.0",
+          "OpenTelemetry.Instrumentation.AspNetCore": "1.12.0",
+          "Scalar.AspNetCore": "2.6.6",
+          "Serilog.AspNetCore": "9.0.0",
+          "Serilog.Extensions.Logging": "9.0.2",
+          "Serilog.Sinks.Console": "6.0.0",
+          "Serilog.Sinks.OpenTelemetry": "4.2.0",
+          "System.IdentityModel.Tokens.Jwt": "8.13.0"
         },
         "runtime": {
           "firstcrud.dll": {}
+        }
+      },
+      "Google.Protobuf/3.30.1": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.30.1.0",
+            "fileVersion": "3.30.1.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.70.0": {
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.70.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.70.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.70.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.70.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.70.0": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.70.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.70.0.0"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -481,6 +527,20 @@
           "Microsoft.Extensions.Options": "9.0.7"
         }
       },
+      "Microsoft.Extensions.FileProviders.Abstractions/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.7"
+        }
+      },
+      "Microsoft.Extensions.Hosting.Abstractions/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.7",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Diagnostics.Abstractions": "9.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7"
+        }
+      },
       "Microsoft.Extensions.Logging/9.0.7": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "9.0.7",
@@ -543,6 +603,48 @@
           "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.725.31616"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/8.13.0": {
+        "runtime": {
+          "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "8.13.0.0",
+            "fileVersion": "8.13.0.60721"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/8.13.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "8.13.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "8.13.0.0",
+            "fileVersion": "8.13.0.60721"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/8.13.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "8.13.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "8.13.0.0",
+            "fileVersion": "8.13.0.60721"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/8.13.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Microsoft.IdentityModel.Logging": "8.13.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "8.13.0.0",
+            "fileVersion": "8.13.0.60721"
           }
         }
       },
@@ -636,11 +738,155 @@
           }
         }
       },
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.12.0": {
+        "dependencies": {
+          "OpenTelemetry": "1.12.0"
+        },
+        "runtime": {
+          "lib/net9.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.12.0.1644"
+          }
+        }
+      },
+      "OpenTelemetry.Instrumentation.AspNetCore/1.12.0": {
+        "dependencies": {
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.12.0"
+        },
+        "runtime": {
+          "lib/net8.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
+            "assemblyVersion": "1.12.0.490",
+            "fileVersion": "1.12.0.490"
+          }
+        }
+      },
       "Scalar.AspNetCore/2.6.6": {
         "runtime": {
           "lib/net9.0/Scalar.AspNetCore.dll": {
             "assemblyVersion": "2.6.6.0",
             "fileVersion": "2.6.6.0"
+          }
+        }
+      },
+      "Serilog/4.2.0": {
+        "runtime": {
+          "lib/net9.0/Serilog.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "Serilog.AspNetCore/9.0.0": {
+        "dependencies": {
+          "Serilog": "4.2.0",
+          "Serilog.Extensions.Hosting": "9.0.0",
+          "Serilog.Formatting.Compact": "3.0.0",
+          "Serilog.Settings.Configuration": "9.0.0",
+          "Serilog.Sinks.Console": "6.0.0",
+          "Serilog.Sinks.Debug": "3.0.0",
+          "Serilog.Sinks.File": "6.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.AspNetCore.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "Serilog.Extensions.Hosting/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Serilog": "4.2.0",
+          "Serilog.Extensions.Logging": "9.0.2"
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Extensions.Hosting.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "Serilog.Extensions.Logging/9.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "9.0.7",
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Extensions.Logging.dll": {
+            "assemblyVersion": "9.0.2.0",
+            "fileVersion": "9.0.2.0"
+          }
+        }
+      },
+      "Serilog.Formatting.Compact/3.0.0": {
+        "dependencies": {
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Formatting.Compact.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "Serilog.Settings.Configuration/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Binder": "9.0.0",
+          "Microsoft.Extensions.DependencyModel": "9.0.7",
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Settings.Configuration.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.Console/6.0.0": {
+        "dependencies": {
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Sinks.Console.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.Debug/3.0.0": {
+        "dependencies": {
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Sinks.Debug.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.File/6.0.0": {
+        "dependencies": {
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Sinks.File.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.OpenTelemetry/4.2.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.30.1",
+          "Grpc.Net.Client": "2.70.0",
+          "Serilog": "4.2.0"
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Sinks.OpenTelemetry.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
           }
         }
       },
@@ -714,6 +960,18 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/9.0.0": {},
+      "System.IdentityModel.Tokens.Jwt/8.13.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "8.13.0",
+          "Microsoft.IdentityModel.Tokens": "8.13.0"
+        },
+        "runtime": {
+          "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "8.13.0.0",
+            "fileVersion": "8.13.0.60721"
+          }
+        }
+      },
       "System.IO.Pipelines/7.0.0": {},
       "System.Reflection.Metadata/7.0.0": {
         "dependencies": {
@@ -730,6 +988,34 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Google.Protobuf/3.30.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HeWXDQBabQn/sCGicbeLJ0HMunknfC4FdLrOQOsaMJHcpqx3HVIpyyJqTrqJlWnza870twhOb+rBcaTiC/TlNA==",
+      "path": "google.protobuf/3.30.1",
+      "hashPath": "google.protobuf.3.30.1.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.70.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66UotvWcSIq41oiQhLWcQACyKPM4umxXNiht5DQTLZJfNwEswWOcS7Z0xIEHyNIBE7ZpjotH22bEjTkvhPxmVw==",
+      "path": "grpc.core.api/2.70.0",
+      "hashPath": "grpc.core.api.2.70.0.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.70.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xNv0FFCVJa5S1beUtye82WFCxKThuE1jbN8DO1x1Rj8VSIWXLBUmfSID5a1fGzsU2R/EMfwPoWclJ2RMfQuGXw==",
+      "path": "grpc.net.client/2.70.0",
+      "hashPath": "grpc.net.client.2.70.0.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.70.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rBdEUMyCwa+iB8mqC6JKyPbj3SBHHkReJj/yy/XKJI63GcG6w9DJMMGTVcYHqq4Ci2W4m0HT4jt2pFfFscar8g==",
+      "path": "grpc.net.common/2.70.0",
+      "hashPath": "grpc.net.common.2.70.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -913,6 +1199,20 @@
       "path": "microsoft.extensions.diagnostics.abstractions/9.0.0",
       "hashPath": "microsoft.extensions.diagnostics.abstractions.9.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.FileProviders.Abstractions/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uK439QzYR0q2emLVtYzwyK3x+T5bTY4yWsd/k/ZUS9LR6Sflp8MIdhGXW8kQCd86dQD4tLqvcbLkku8qHY263Q==",
+      "path": "microsoft.extensions.fileproviders.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.abstractions.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Hosting.Abstractions/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yUKJgu81ExjvqbNWqZKshBbLntZMbMVz/P7Way2SBx7bMqA08Mfdc9O7hWDKAiSp+zPUGT6LKcSCQIPeDK+CCw==",
+      "path": "microsoft.extensions.hosting.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.hosting.abstractions.9.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Logging/9.0.7": {
       "type": "package",
       "serviceable": true,
@@ -954,6 +1254,34 @@
       "sha512": "sha512-ti/zD9BuuO50IqlvhWQs9GHxkCmoph5BHjGiWKdg2t6Or8XoyAfRJiKag+uvd/fpASnNklfsB01WpZ4fhAe0VQ==",
       "path": "microsoft.extensions.primitives/9.0.7",
       "hashPath": "microsoft.extensions.primitives.9.0.7.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Abstractions/8.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gHTIONGSrGAMu6QdUoXsqC7d+sZ3WUHuaMOxpI0SjeMrQsR1kkd5KakpG6UMl1QNFyzctWUCloC5wsG8keDkyQ==",
+      "path": "microsoft.identitymodel.abstractions/8.13.0",
+      "hashPath": "microsoft.identitymodel.abstractions.8.13.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/8.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aWSosjvr4cZPqknW+8+6fs0HzD/lAIDFFtI5ajcrxI5CcCg2+YacpPi03oA+prl4sSuh16+HuI/oYq9ZgdlPqA==",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.13.0",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.8.13.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Logging/8.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ydRP1oDvel5JbuVL2UPWHbXEhECaBmbl7/SPx6J0UeEEiassy62glDyWXNKyKS/gb1MrWp5/Y2TQKEtBDXwPuQ==",
+      "path": "microsoft.identitymodel.logging/8.13.0",
+      "hashPath": "microsoft.identitymodel.logging.8.13.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Tokens/8.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-25zE+hhKJTOUPh5lxAeHgHiNPDYsPo3iJHd2JVKTalFqMJChJvOkrB5+9PsgKiNm7TpB9h2l6h4AbAl0D3H7OA==",
+      "path": "microsoft.identitymodel.tokens/8.13.0",
+      "hashPath": "microsoft.identitymodel.tokens.8.13.0.nupkg.sha512"
     },
     "Microsoft.OpenApi/1.6.17": {
       "type": "package",
@@ -1011,12 +1339,96 @@
       "path": "opentelemetry.exporter.console/1.12.0",
       "hashPath": "opentelemetry.exporter.console.1.12.0.nupkg.sha512"
     },
+    "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7LzQSPhz5pNaL4xZgT3wkZODA1NLrEq3bet8KDHgtaJ9q+VNP7wmiZky8gQfMkB4FXuI/pevT8ZurL4p5997WA==",
+      "path": "opentelemetry.exporter.opentelemetryprotocol/1.12.0",
+      "hashPath": "opentelemetry.exporter.opentelemetryprotocol.1.12.0.nupkg.sha512"
+    },
+    "OpenTelemetry.Instrumentation.AspNetCore/1.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r+Mzggd2P4N0Y34QIO6kakVPBOKFYSHnLkTrXXM+r37ABp+iaUvVUe+u/uxszsi5f7P5mrG0uYYaJ1QGHvzo3A==",
+      "path": "opentelemetry.instrumentation.aspnetcore/1.12.0",
+      "hashPath": "opentelemetry.instrumentation.aspnetcore.1.12.0.nupkg.sha512"
+    },
     "Scalar.AspNetCore/2.6.6": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-wKysnH2nNtQpe3iIyrRvsoyEo1gy14nRdXA+jiwDwYxsNhf9SzsuX4Op1IIFFdRu6WAcZ9j3lXqZEXWOHhffQg==",
       "path": "scalar.aspnetcore/2.6.6",
       "hashPath": "scalar.aspnetcore.2.6.6.nupkg.sha512"
+    },
+    "Serilog/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gmoWVOvKgbME8TYR+gwMf7osROiWAURterc6Rt2dQyX7wtjZYpqFiA/pY6ztjGQKKV62GGCyOcmtP1UKMHgSmA==",
+      "path": "serilog/4.2.0",
+      "hashPath": "serilog.4.2.0.nupkg.sha512"
+    },
+    "Serilog.AspNetCore/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JslDajPlBsn3Pww1554flJFTqROvK9zz9jONNQgn0D8Lx2Trw8L0A8/n6zEQK1DAZWXrJwiVLw8cnTR3YFuYsg==",
+      "path": "serilog.aspnetcore/9.0.0",
+      "hashPath": "serilog.aspnetcore.9.0.0.nupkg.sha512"
+    },
+    "Serilog.Extensions.Hosting/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u2TRxuxbjvTAldQn7uaAwePkWxTHIqlgjelekBtilAGL5sYyF3+65NWctN4UrwwGLsDC7c3Vz3HnOlu+PcoxXg==",
+      "path": "serilog.extensions.hosting/9.0.0",
+      "hashPath": "serilog.extensions.hosting.9.0.0.nupkg.sha512"
+    },
+    "Serilog.Extensions.Logging/9.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p8kk2McN6LxuQfLyCoOkL7+nJIhVKnV1WFUxAaGTQTQk0wySbgmCHe98j+xSQvIbYHtzKXROOE2G2R0TLwBfig==",
+      "path": "serilog.extensions.logging/9.0.2",
+      "hashPath": "serilog.extensions.logging.9.0.2.nupkg.sha512"
+    },
+    "Serilog.Formatting.Compact/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wQsv14w9cqlfB5FX2MZpNsTawckN4a8dryuNGbebB/3Nh1pXnROHZov3swtu3Nj5oNG7Ba+xdu7Et/ulAUPanQ==",
+      "path": "serilog.formatting.compact/3.0.0",
+      "hashPath": "serilog.formatting.compact.3.0.0.nupkg.sha512"
+    },
+    "Serilog.Settings.Configuration/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4/Et4Cqwa+F88l5SeFeNZ4c4Z6dEAIKbu3MaQb2Zz9F/g27T5a3wvfMcmCOaAiACjfUb4A6wrlTVfyYUZk3RRQ==",
+      "path": "serilog.settings.configuration/9.0.0",
+      "hashPath": "serilog.settings.configuration.9.0.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.Console/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fQGWqVMClCP2yEyTXPIinSr5c+CBGUvBybPxjAGcf7ctDhadFhrQw03Mv8rJ07/wR5PDfFjewf2LimvXCDzpbA==",
+      "path": "serilog.sinks.console/6.0.0",
+      "hashPath": "serilog.sinks.console.6.0.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.Debug/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4BzXcdrgRX7wde9PmHuYd9U6YqycCC28hhpKonK7hx0wb19eiuRj16fPcPSVp0o/Y1ipJuNLYQ00R3q2Zs8FDA==",
+      "path": "serilog.sinks.debug/3.0.0",
+      "hashPath": "serilog.sinks.debug.3.0.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.File/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lxjg89Y8gJMmFxVkbZ+qDgjl+T4yC5F7WSLTvA+5q0R04tfKVLRL/EHpYoJ/MEQd2EeCKDuylBIVnAYMotmh2A==",
+      "path": "serilog.sinks.file/6.0.0",
+      "hashPath": "serilog.sinks.file.6.0.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.OpenTelemetry/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PzMCyE5G19tjr5IZEi5qg+4UU5QrxBEoBEMu/hhYybTrGKXqUDiSGWKZNUDBgelaVKqLADlsmlJVyKce5SyPrg==",
+      "path": "serilog.sinks.opentelemetry/4.2.0",
+      "hashPath": "serilog.sinks.opentelemetry.4.2.0.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
@@ -1080,6 +1492,13 @@
       "sha512": "sha512-ddppcFpnbohLWdYKr/ZeLZHmmI+DXFgZ3Snq+/E7SwcdW4UnvxmaugkwGywvGVWkHPGCSZjCP+MLzu23AL5SDw==",
       "path": "system.diagnostics.diagnosticsource/9.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512"
+    },
+    "System.IdentityModel.Tokens.Jwt/8.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GA3moxioWoF/lzRRGNjz+7LD91tajHvS4S6zn3Y3G1p/Koes7pj6gZIt4rzGhe4iIn4rvdj9wxpmN6quObgfMw==",
+      "path": "system.identitymodel.tokens.jwt/8.13.0",
+      "hashPath": "system.identitymodel.tokens.jwt.8.13.0.nupkg.sha512"
     },
     "System.IO.Pipelines/7.0.0": {
       "type": "package",
